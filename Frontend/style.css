@@ -1,0 +1,165 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #b8b8c7;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#task-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+#task-input:focus {
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+
+#add-task-btn {
+    padding: 10px 15px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background-color: #4c06fd;
+}
+
+/* New Workplace Input Section */
+.new-workplace-section {
+    margin-top: 20px;
+}
+
+#workplace-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#add-workplace-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3700b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-workplace-btn:hover {
+    background-color: #2900a3;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#task-list li {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#task-list li:hover {
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff1744;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 200px;
+    background-color: #6200ea;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3700b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li button:hover {
+    background-color: #2900a3;
+}
+
+/* Adjust main content to accommodate sidebar */
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
