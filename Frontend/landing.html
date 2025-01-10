@@ -2,32 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskify</title>
+    <title>Taskify - Future of Task Management</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
+    
     <header class="navbar">
-        <div class= "logo"> </div>
-        <img src="C:\To Do App Project\Frontend\icon.png" alt="Logo" class="logo"> </div>
+        <div class="logo">
+            <img src="icon.png" alt="Logo" class="logo-img">
+            <span>Taskify</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-        <button class="cta-button">Get Started</button>
+        <button class="cta-button glow-effect">Launch App</button>
     </header>
+
     <section class="hero">
         <div class="hero-content">
-            <h1>Organize Your Day <br> With Futuristic Precision</h1>
-            <p>Experience the next-gen task manager that's designed to boost your productivity and bring order to your life.</p>
-            <button class="cta-button">Start Now</button>
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="Task Management Evolved">Task Management Evolved</h1>
+            </div>
+            <p class="hero-text">Experience the future of productivity with AI-powered task organization, 
+               holographic interfaces, and quantum-inspired scheduling algorithms.</p>
+            <div class="cta-group">
+                <button class="cta-button primary glow-effect">Begin Journey</button>
+                <button class="cta-button secondary">Watch Demo</button>
+            </div>
+            <div class="feature-pills">
+                <span class="pill">AI Powered</span>
+                <span class="pill">Neural Sync</span>
+                <span class="pill">Quantum Ready</span>
+            </div>
         </div>
-        <div class="hero-graphics"></div>
+        <div class="hero-graphics">
+            <div class="floating-elements">
+                <div class="cube"></div>
+                <div class="sphere"></div>
+                <div class="pyramid"></div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded');
+        });
+    </script>
 </body>
 </html>
