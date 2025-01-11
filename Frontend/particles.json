@@ -8,31 +8,31 @@
       }
     },
     "color": {
-      "value": "#00f7ff"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.5,
-      "random": false
+      "value": 0.1,
+      "random": true
     },
     "size": {
-      "value": 3,
+      "value": 2,
       "random": true
     },
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#00f7ff",
-      "opacity": 0.4,
+      "color": "#ffffff",
+      "opacity": 0.1,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 1,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false
@@ -43,13 +43,21 @@
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
         "mode": "push"
       },
       "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 0.3
+        }
+      }
     }
   },
   "retina_detect": true
