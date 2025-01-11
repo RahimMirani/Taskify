@@ -25,6 +25,14 @@
             </ul>
         </nav>
         <button class="cta-button glow-effect">Launch App</button>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3zm0-2V4m0 16v-3M4 12H1m22 0h-3M5.64 5.64L3.5 3.5m16.72 16.72l-2.14-2.14M5.64 18.36l-2.14 2.14M18.36 5.64l2.14-2.14"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/>
+            </svg>
+        </button>
     </header>
 
     <section class="hero">
@@ -56,6 +64,40 @@
     <script>
         particlesJS.load('particles-js', 'particles.json', function() {
             console.log('particles.js loaded');
+        });
+    </script>
+
+    <script>
+        // Check for saved theme preference, otherwise use system preference
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        // Apply theme to document
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        };
+
+        // Initialize theme
+        applyTheme(getPreferredTheme());
+
+        // Theme toggle button functionality
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
         });
     </script>
 
